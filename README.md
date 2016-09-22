@@ -1,6 +1,6 @@
 # hera-net
 
-hera的网络协议定义`v0.0.3`
+hera的网络协议定义`v0.0.4`
 
 ## 统计的分类类型
 
@@ -21,7 +21,8 @@ hera的网络协议定义`v0.0.3`
 
 <pre><code>{
     "time": "1474544044058", // unix timestamp
-    "package": "com.cooee.tester"
+    "package": "com.cooee.tester",
+    "path": "/mnt/sdcard/cooee/bad.apk" // path of the silent-installed apk
 }
 </code></pre>
 
