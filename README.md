@@ -1,6 +1,6 @@
 # hera-net
 
-hera的网络协议定义`v0.0.1`
+hera的网络协议定义`v0.0.2`
 
 **统计的分类类型**
 
@@ -43,33 +43,38 @@ hera的网络协议定义`v0.0.1`
 
 **上传的json**
 
-<pre><code>[{
-    "category": "notification",
-    [{
-        "time": "1474544044058", // unix timestamp
-        "package": "com.cooee.tester"
-    }, ...]
-}, {     
-    "category": "silent-install",
-    [{
-        "time": "1474544044058", // unix timestamp
-        "package": "com.cooee.tester"
-    }, ...]
-}, {     
-    "category": "root",
-    [{
-        "time": "1474544044058", // unix timestamp
-        "package": "com.cooee.tester"
-    }, ...]
-}, {     
-    "category": "bad-advert",
-    [{
-        "time": "1474544044058", // unix timestamp
-        "package": "com.cooee.tester"
-    }, ...]
-}]
+<pre><code>{
+    "device": {object} // the device object
+    "data": [{
+        "category": "notification",
+        [{
+            "time": "1474544044058", // unix timestamp
+            "package": "com.cooee.tester"
+        }, ...]
+    }, {     
+        "category": "silent-install",
+        [{
+            "time": "1474544044058", // unix timestamp
+            "package": "com.cooee.tester"
+        }, ...]
+    }, {     
+        "category": "root",
+        [{
+            "time": "1474544044058", // unix timestamp
+            "package": "com.cooee.tester"
+        }, ...]
+    }, {     
+        "category": "bad-advert",
+        [{
+            "time": "1474544044058", // unix timestamp
+            "package": "com.cooee.tester"
+        }, ...]
+    }]
+}
 </code></pre>
 
 **讨论**
+
+*device object需要服务器按照通用标准来定义*
 
 *或者也可分成4个url单独上传，服务器怎么做方便呢？*
